@@ -35,3 +35,12 @@ sudo apt update && sudo apt upgrade -y
 
 # Instalar herramientas básicas
 sudo apt install -y curl wget git vim htop
+
+## 🔧 Configuración SSH Segura
+
+Ejecutar el script de configuración:
+
+```bash
+# Dar permisos y ejecutar
+chmod +x scripts/secure-ssh.sh
+./scripts/secure-ssh.sh
