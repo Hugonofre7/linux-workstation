@@ -21,3 +21,4 @@ sudo ufw --force enable
 
 echo "✅ SSH configurado en puerto 2222"
 echo "🔐 Firewall activado"
+echo "🚀 SSH seguro configurado exitosamente"
