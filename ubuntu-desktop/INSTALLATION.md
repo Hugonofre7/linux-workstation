@@ -39,3 +39,30 @@ sudo apt update && sudo apt upgrade -y
 
 # Instalar herramientas esenciales
 sudo apt install -y curl wget git vim htop
+
+## 🔗 Próximos Pasos: Conexión al Servidor
+
+Una vez que el servidor esté configurado con SSH en puerto 2222:
+
+```bash
+# Copiar clave SSH al servidor
+ssh-copy-id -p 2222 usuario@IP-DEL-SERVIDOR
+
+# Crear alias para acceso rápido
+echo "alias production='ssh usuario@IP-DEL-SERVIDOR -p 2222'" >> ~/.zshrc
+source ~/.zshrc
+
+# Cambiamos puerto en /etc/ssh/sshd_config
+Port 2222
+
+# Reiniciamos SSH con:
+sudo systemctl restart ssh    # ✅ Comando correcto
+
+# PERO SSH SEGUÍA EN PUERTO 22
+# ¿Por qué? Porque necesitaba REINICIAR TODO EL SISTEMA
+
+# Después de configurar SSH, ejecutar:
+sudo reboot
+
+# Al reiniciar, SSH ya escuchaba en puerto 2222
+
