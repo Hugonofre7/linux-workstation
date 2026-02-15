@@ -8,8 +8,8 @@ INTERFAZ=$(ip route | grep default | awk '{print $5}')
 echo "📡 Interfaz detectada: $INTERFAZ"
 
 # Solicitar datos al usuario
-read -p "🌐 IP deseada (ej. 192.168.1.100/24): " IP
-read -p "🚪 Gateway (ej. 192.168.1.1): " GATEWAY
+read -p "🌐 IP deseada (ej. 000.000.0.000/24): " IP
+read -p "🚪 Gateway (ej. 000.000.0.0): " GATEWAY
 read -p "📡 DNS primario (ej. 8.8.8.8): " DNS1
 read -p "📡 DNS secundario (ej. 8.8.4.4): " DNS2
 
